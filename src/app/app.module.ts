@@ -4,21 +4,27 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 //services
-import {ListaDeseosServices} from '../services/lista-deseos.services'
+import {ListaDeseosServices} from '../services/lista-deseos.services';
+
+//pipe
+import {PipesPlaceholder} from '../pipe/pipes-placeholder';
 
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TabsPage } from '../pages/tabs/tabs';
+import {AgregarComponet} from '../pages/agregar/agregar.componet'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
+    PipesPlaceholder,
     MyApp,
     TerminadosComponent,
     PendientesComponent,
-    TabsPage
+    TabsPage,
+    AgregarComponet
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     TerminadosComponent,
     PendientesComponent,
-    TabsPage
+    TabsPage,
+    AgregarComponet
   ],
   providers: [
     StatusBar,
